@@ -1,8 +1,16 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [project]
 name = "cicd-test-a-1"
 version = "0.1.0"
+description = "A simple Flask BMI calculator app"
 requires-python = ">=3.12"
 dependencies = [
     "flask>=3.1.3",
     "gunicorn>=26.0.0",
 ]
+
+[tool.setuptools]
+py-modules = ["app"]

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BMI Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 420px;
+            margin: 40px auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .panel {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        @media (max-width: 480px) {
+            body {
+                margin: 20px auto;
+                padding: 15px;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>BMI Result</h1>
+
+    <div class="panel">
+        <p>BMI: {{ bmi }} ({{ category }})</p>
+
+        <form action="/" method="get">
+            <button type="submit">Return to Main</button>
+        </form>
+    </div>
+</body>
+</html>
